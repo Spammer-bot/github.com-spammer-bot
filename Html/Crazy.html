@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Crazy Web</title>
+        <style>
+            body {
+                background: linear-gradient(135deg, #ff00cc, #3333ff, #00ffcc);
+                font-family: 'Comic Sans MS', cursive;
+                color: white;
+                text-align: center;
+                animation: bgColor 10s infinite alternate; 
+            }
+
+            @keyframes bgColor {
+                0% { background-position: 0% 50%; }
+                100% { background-position: 100% 50%;}
+            }
+
+            h1 {
+                font-size: 60px;
+                animation: rainbowText 3s infinite;
+            }
+
+            @keyframes rainbowText {
+                0% { color: red; }
+                20% { color: orange; }
+                40% { color: yellow; }
+                60% { color: green; }
+                80% { color: blue; }
+                100% { color: violet; }
+            }
+
+            .spin {
+                animation: spin 5s linear infinite;
+                width: 150px;
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+
+            .bounce {
+                display: inline-block;
+                animation: bounce 1s infinite alternate;
+                font-size: 50px;
+            }
+
+            @keyframes bounce {
+                from { transform: translateY(0px); }
+                to { transform: translateY(-30px); }
+            }
+
+            .crazy-button {
+                background: yellow;
+                color: black;
+                padding: 15px 30px;
+                font-size: 20px;
+                border: 3px dashed red;
+                cursor: pointer;
+                transition: transform 0.2s;
+            }
+
+            .crazy-button:hover {
+                transform: scale(1.2) rotate(5deg);
+                background: lime;
+            }
+
+            .floating {
+                animation: float 3s ease-in-out infinite;
+            }
+
+            @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+                100% { transform: translateY(0px); }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>💥 Welcome to the CRAZY ZONE 💥</h1>
+
+        <div class="bounce">😜</div>
+        <div class="bounce">🦄</div>
+        <div class="bounce">🎉</div>
+
+        <p style="font-size: 24px;">Everything here is wild and wacky!</p>
+
+        <img class="spin" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="spinning gif">
+        <p class="floating">This image spins forever... wheee! 🎠</p>
+
+        <h2 style="color: hotpink;">Click the Crazy Button Below</h2>
+        <button class="crazy-button" onclick="alert('BOO! 😂 You clicked the CRAZY button!')">Don't Click Me!</button>
+
+        <h2 style="margin-top: 40px;">🎵 Background Music 🎵</h2>
+        <audio autoplay loop>
+            <source src="https://www.bensound.com/bensound-music/bensound-funkyelement.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+
+        <p style="font-size: 18px; margin-top: 50px;">Made with 💖 by Vibhor Gupta</p>
+    </body>
+</html>
